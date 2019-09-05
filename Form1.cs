@@ -124,5 +124,10 @@ namespace Save_My_Files_To_USB
             if (Properties.Settings.Default.First_Time)
                 Properties.Settings.Default.First_Time = !Properties.Settings.Default.First_Time;
         }
+
+        private void EventLog1_EntryWritten(object sender, System.Diagnostics.EntryWrittenEventArgs e)
+        {
+            MessageBox.Show(e.Entry.Category);
+        }
     }
 }
